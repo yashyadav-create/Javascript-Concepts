@@ -25,3 +25,19 @@ function subscribed(){
   c();
   c();
   c();
+
+/*Output
+Subscribe
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+Already subscribed
+*/
