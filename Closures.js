@@ -6,7 +6,7 @@ function subscribed(){
         console.log("Already subscribed");
       }
       else{
-        console.log("Subscribe to Roadside Coder");
+        console.log("Subscribe ");
         count++;
       }
     }
