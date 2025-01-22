@@ -46,3 +46,21 @@ function add(a){
     }
 }
 console.log(add(1)(2)(3)(4)(5)())
+
+//Currying vs Partial Application
+function sum(a){
+    return function(b,c){
+      return a+b+c;
+    }
+  }
+  const x=sum(4);
+  console.log(x(2,3))
+
+  //Manipulating DOM using currying
+  function updateHeader(id){
+    return function(content){
+      document.getElementById("header").textContent = content;
+    }
+  }
+  const x=updateHeader("header")
+  console.log(x("Hello yash"))
