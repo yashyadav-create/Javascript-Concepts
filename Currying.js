@@ -13,3 +13,36 @@ function sum(a){
 console.log(sum(4)(5)(6));
 
 //Output - 15
+
+
+/*Q.evaluate(sum)(4)(2) => 6
+evaluate(subtract)(4)(2) => 2
+evaluate(multiply)(4)(2) => 8
+evaluate(divide)(4)(2) => 2
+*/
+
+function evaluate(operation){
+    return function(a){
+        return function(b){
+            if(operation == "sum") return a+b;
+            else if(operation == "multiply") return a*b;
+            else if(operation == "subtract") return a-b;
+            else if(operation == "divide") return a/b;
+            else
+            return "Invalid"
+        }
+
+    }
+}
+console.log(evaluate(multiply)(4)(2));
+
+
+/*Q3. Infinite Currying sum(1)(2)...n*/
+
+function add(a){
+    return function (b){
+        if(b) return add(a+b)
+            return a;
+    }
+}
+console.log(add(1)(2)(3)(4)(5)())
