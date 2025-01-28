@@ -47,7 +47,7 @@ function add(a){
 }
 console.log(add(1)(2)(3)(4)(5)())
 
-//Currying vs Partial Application
+//Currying vs Partial Application currying means no of arguments should be equal to no of functions
 function sum(a){
     return function(b,c){
       return a+b+c;
@@ -62,5 +62,9 @@ function sum(a){
       document.getElementById("header").textContent = content;
     }
   }
-  const x=updateHeader("header")
-  console.log(x("Hello yash"))
+  const z=updateHeader("header")
+  console.log(z("Hello yash"))
+
+  //Curry implementation to convert this function using curry()
+  //f(a,b,c) to f(a)(b)(c)
+
